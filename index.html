@@ -579,13 +579,13 @@
 
 <header>
   <div class="header-inner">
-    <div class="header-label">FOM Hochschule · Interaktives Lernmodul</div>
+    <div class="header-label">Interaktives Lernmodul</div>
     <h1>Supply Chain Management</h1>
-    <p>Prof. Dr. Uwe Schindler, MBA · Prüfungsvorbereitung</p>
+    <p>Prüfungsvorbereitung</p>
     <div class="progress-bar-wrap">
       <div class="progress-bar-fill" id="globalProgress"></div>
     </div>
-    <div class="progress-label" id="progressLabel">0 von 5 Themen erkundet</div>
+    <div class="progress-label" id="progressLabel">0 von 7 Themen erkundet</div>
   </div>
 </header>
 
@@ -596,6 +596,7 @@
   <button onclick="showSection('ccc', this)">Cash Conversion Cycle</button>
   <button onclick="showSection('losgroesse', this)">Losgrößenplanung</button>
   <button onclick="showSection('sourcing', this)">Sourcing-Strategien</button>
+  <button onclick="showSection('ki', this)">Künstliche Intelligenz</button>
   <button onclick="showSection('flashcards', this)">Flashcards</button>
   <button onclick="showSection('quiz', this)">Quiz</button>
 </nav>
@@ -978,6 +979,93 @@
   </div>
 </div>
 
+<!-- ===================== KI ===================== -->
+<div class="section" id="sec-ki">
+  <h2 class="section-heading">Künstliche Intelligenz im SCM</h2>
+  <p class="section-sub">Definitionen, Anwendungsfälle und wirtschaftliche Herausforderungen.</p>
+
+  <div class="card">
+    <div class="card-title"><div class="icon">🤖</div>Definition KI (Kreutzer/Sirrenberg, 2019)</div>
+    <div class="definition-box">
+      KI bezeichnet die Fähigkeit einer Maschine, kognitive Aufgaben auszuführen, die wir mit dem menschlichen Verstand verbinden — darunter Wahrnehmung, Argumentation, selbstständiges Lernen und eigenständiges Finden von Problemlösungen.
+    </div>
+    <div class="definition-box" style="margin-top:0.75rem;font-style:italic;">
+      „Der Kern der KI besteht darin, selbstständig große Datenmengen zu verarbeiten, darin eigenständig Muster zu erkennen und auf deren Grundlage autonom Entscheidungen und/oder Vorhersagen zu treffen."
+    </div>
+    <p style="font-size:0.875rem;color:var(--text-muted);margin-top:0.75rem;line-height:1.6;">Kern der KI ist <strong>Software</strong>. Sie beinhaltet die Erforschung, wie „intelligentes" Verhalten Probleme lösen kann, und die Entwicklung von Systemen, die automatisiert „intelligente" Lösungen erzeugen sollen.</p>
+    <div class="memory-box">
+      <div class="memory-box-label">Merkhilfe — "WAL"</div>
+      <strong>W</strong>ahrnehmen · <strong>A</strong>rgumentieren · <strong>L</strong>ernen = die drei Kernfähigkeiten einer KI
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon">🚗</div>Anwendungsfall 1: Autonomes Fahren</div>
+    <p style="font-size:0.875rem;color:var(--text-muted);margin-bottom:0.75rem;">Verschiedene Entwicklungsstufen hin zum autonomen Fahrzeug:</p>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Stufe</th><th>Bezeichnung</th></tr></thead>
+        <tbody>
+          <tr><td><span class="badge badge-teal">0</span></td><td>Drivers only</td></tr>
+          <tr><td><span class="badge badge-teal">1</span></td><td>Assistiertes Fahren</td></tr>
+          <tr><td><span class="badge badge-amber">2</span></td><td>Teilautomatisiertes Fahren</td></tr>
+          <tr><td><span class="badge badge-amber">3</span></td><td>Hochautomatisiertes Fahren</td></tr>
+          <tr><td><span class="badge badge-red">4</span></td><td>Voll automatisiertes Fahren</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:0.875rem;font-weight:600;color:var(--teal-dark);margin:0.75rem 0 0.4rem;">Wirtschaftliche Herausforderungen:</p>
+    <ul class="sum-list">
+      <li><div class="dot"></div><div>Mangelnde Nutzerakzeptanz — 53% der Befragten skeptisch/ablehnend (Umfrage, 1003 Personen in Deutschland)</div></li>
+      <li><div class="dot"></div><div>Rechtliche Fragen bzgl. Haftung im Schadensfall</div></li>
+      <li><div class="dot"></div><div>Ethische Dimension bei Personenschäden</div></li>
+      <li><div class="dot"></div><div>IT-Sicherheits- und Datenschutzaspekte (Hacker, Software Bugs)</div></li>
+      <li><div class="dot"></div><div>Arbeitsplatzverlust / Umschulung der LKW-Fahrer</div></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon">🏭</div>Anwendungsfall 2: Fahrerlose Transportfahrzeuge (FTF/FTS)</div>
+    <div class="definition-box">
+      <strong>Schwarmintelligenz:</strong> Fahrzeuge transportieren Ladungsträger autonom und suchen selbstständig ihren Weg zum Lager, Lagerplatz oder Montageplatz.
+    </div>
+    <ul class="sum-list" style="margin-top:0.75rem;">
+      <li><div class="dot"></div><div>Haben Sensorfusionsmöglichkeiten</div></li>
+      <li><div class="dot"></div><div>Vernetzen sich über die Cloud</div></li>
+      <li><div class="dot"></div><div>Nutzen Ameisenalgorithmen, um voneinander zu lernen</div></li>
+    </ul>
+    <p style="font-size:0.875rem;font-weight:600;color:var(--teal-dark);margin:0.75rem 0 0.4rem;">Wirtschaftliche Herausforderungen:</p>
+    <ul class="sum-list">
+      <li><div class="dot"></div><div>Sicherheitsbedenken der Anwender (Cyber-Angriffe)</div></li>
+      <li><div class="dot"></div><div>Hoher Investitionsbedarf / aufwendige Planung und Ersteinrichtung</div></li>
+      <li><div class="dot"></div><div>Bauliche Veränderungen für Implementierung notwendig</div></li>
+      <li><div class="dot"></div><div>Know-how / qualifiziertes Personal notwendig</div></li>
+      <li><div class="dot"></div><div>Wirtschaftlicher Nutzen für Anwender häufig unklar</div></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon">📦</div>Anwendungsfall 3: Intelligente Behälter — Beispiel iBin</div>
+    <div class="definition-box">
+      Der iBin ersetzt die physisch durchzuführende Inventur. Eine im Behälter angebrachte <strong>Infrarot-Kamera</strong> ermittelt automatisch den Bestand.
+    </div>
+    <ul class="sum-list" style="margin-top:0.75rem;">
+      <li><div class="dot"></div><div>Kann seinen Füllstand selbst erfassen</div></li>
+      <li><div class="dot"></div><div>Löst rechtzeitig Bestellungen aus — abhängig von Verbrauch, Wiederbeschaffungszeit und Restmenge</div></li>
+    </ul>
+    <p style="font-size:0.875rem;font-weight:600;color:var(--teal-dark);margin:0.75rem 0 0.4rem;">Herausforderungen iBin:</p>
+    <ul class="sum-list">
+      <li><div class="dot"></div><div>Technische Probleme bei Bildauswertung: Exakte Erfassung auf Einzelstückebene erst möglich, wenn Teile sich vom Boden abheben — vorher nur Schätzung</div></li>
+      <li><div class="dot"></div><div>Kosten für Hard- und Software sowie Wartungskosten</div></li>
+      <li><div class="dot"></div><div>IT-Sicherheit</div></li>
+    </ul>
+    <div class="memory-box">
+      <div class="memory-box-label">Merkhilfe — Die 3 KI-Anwendungsfälle</div>
+      <strong>A</strong>utonomes Fahren · <strong>F</strong>ahrerlose Transportsysteme · <strong>I</strong>ntelligente Behälter (iBin) — "AFI — Automatisierung Findet Immer statt"
+    </div>
+  </div>
+</div>
+
 <!-- ===================== FLASHCARDS ===================== -->
 <div class="section" id="sec-flashcards">
   <h2 class="section-heading">Flashcards</h2>
@@ -1007,10 +1095,10 @@
 <!-- ===================== QUIZ ===================== -->
 <div class="section" id="sec-quiz">
   <h2 class="section-heading">Wissensquiz</h2>
-  <p class="section-sub">Teste dein Wissen mit 10 prüfungsrelevanten Fragen.</p>
+  <p class="section-sub">Teste dein Wissen mit 12 prüfungsrelevanten Fragen.</p>
 
   <div class="card" id="quiz-card">
-    <div class="quiz-counter" id="quiz-counter">Frage 1 von 10</div>
+    <div class="quiz-counter" id="quiz-counter">Frage 1 von 12</div>
     <div class="quiz-question" id="quiz-q"></div>
     <div class="quiz-options" id="quiz-opts"></div>
     <div class="quiz-feedback" id="quiz-feedback"></div>
@@ -1030,7 +1118,7 @@ function showSection(id, btn) {
   document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   visited.add(id);
-  const sections = ['grundlagen','bullwhip','bedarfsermittlung','ccc','losgroesse','sourcing'];
+  const sections = ['grundlagen','bullwhip','bedarfsermittlung','ccc','losgroesse','sourcing','ki'];
   const count = sections.filter(s => visited.has(s)).length;
   document.getElementById('globalProgress').style.width = Math.round(count/sections.length*100) + '%';
   document.getElementById('progressLabel').textContent = count + ' von ' + sections.length + ' Themen erkundet';
@@ -1155,6 +1243,10 @@ const flashcards = [
   { term: 'Engpasspoker', answer: '6. Ursache des Bullwhip-Effekts: Produktkontingentierung durch den Produzenten führt zu strategischem Überbestellen der Kettenteilnehmer.' },
   { term: 'Paradigma des SCM', answer: 'Nicht Einzelunternehmen, sondern vernetzte Lieferketten konkurrieren miteinander. SCM koordiniert das Gesamtsystem.' },
   { term: 'Auflagendegression', answer: 'Je größer das Fertigungslos, desto geringer die fixen Umrüstkosten pro Stück. Gegenteil: Auflagenproportionalität (steigende Lagerkosten).' },
+  { term: 'Künstliche Intelligenz (KI)', answer: 'Fähigkeit einer Maschine, kognitive Aufgaben auszuführen: Wahrnehmen, Argumentieren, selbstständiges Lernen und Problemlösen. Kern ist Software. (Kreutzer/Sirrenberg, 2019)' },
+  { term: 'Autonomes Fahren — Stufen', answer: 'Stufe 0: Drivers only · Stufe 1: Assistiert · Stufe 2: Teilautomatisiert · Stufe 3: Hochautomatisiert · Stufe 4: Voll automatisiert.' },
+  { term: 'Fahrerlose Transportfahrzeuge (FTF/FTS)', answer: 'Schwarmintelligenz: Fahrzeuge transportieren autonom, suchen selbstständig Wege, nutzen Sensorfusion, Cloud-Vernetzung und Ameisenalgorithmen.' },
+  { term: 'iBin (Intelligenter Behälter)', answer: 'Ersetzt physische Inventur. Infrarot-Kamera erfasst Füllstand automatisch und löst Bestellungen aus — abhängig von Verbrauch, Wiederbeschaffungszeit und Restmenge.'},
 ];
 let fcIdx = 0;
 function renderCard() {
@@ -1180,6 +1272,8 @@ const questions = [
   { q: 'Was beschreibt das "Wesentliche Paradigma" des SCM?', opts: ['Kostensenkung durch Lagerhaltung','Nicht Einzelunternehmen, sondern vernetzte Lieferketten konkurrieren','Der Endkunde steht nicht im Mittelpunkt','Fließfertigung ist immer vorzuziehen'], correct: 1, exp: 'Schönsleben/Hieber (2004): Nicht Einzelunternehmen, sondern vernetzte Lieferketten konkurrieren miteinander.' },
   { q: 'Wo liegt die optimale Losgröße?', opts: ['Wo die Rüstkosten am niedrigsten sind','Wo die Lagerkosten am niedrigsten sind','Wo die Summe aus auflagefixen und auflagevariablen Kosten/Stück minimal ist','Wo die Produktionskapazität maximal genutzt wird'], correct: 2, exp: 'Die optimale Losgröße ist der Kompromiss: Minimum der Gesamtkostenkurve aus auflagefixen (Rüst-) und auflagevariablen (Lager-)kosten.' },
   { q: 'Welcher Vorteil gehört NICHT zum Single Sourcing?', opts: ['Mengenrabatte durch hohe Abnahmemengen','Wettbewerb zwischen mehreren Lieferanten','Bevorzugte Behandlung bei Engpässen','Geringe Transaktionskosten'], correct: 1, exp: 'Wettbewerb ist ein Vorteil von Multiple Sourcing, nicht von Single Sourcing. Single Sourcing hat genau einen Lieferanten.' },
+  { q: 'Was ist laut Skript der "Kern" der Künstlichen Intelligenz?', opts: ['Hardware-Prozessoren','Software','Neuronale Netze aus Silizium','Robotik'], correct: 1, exp: 'Laut Skript (Kreutzer/Sirrenberg, 2019) ist der Kern der KI Software — nicht Hardware.' },
+    { q: 'Welche Technologie ermöglicht beim iBin die automatische Bestandserfassung?', opts: ['RFID-Chip','Ultraschallsensor','Infrarot-Kamera','Waage'], correct: 2, exp: 'Laut Skript ist eine im Behälter angebrachte Infrarot-Kamera für die automatische Bestandserfassung verantwortlich.' },
   { q: 'Welche Kennzahl beschreibt das durchschnittliche Zahlungsziel der Kunden?', opts: ['DIO (Days Inventory Outstanding)','DPO (Days Payables Outstanding)','DSO (Days Sales Outstanding)','CCC (Cash Conversion Cycle)'], correct: 2, exp: 'DSO = Days Sales Outstanding = durchschnittliche Debitorenlaufzeit = wie lange Kunden im Durchschnitt auf Zahlung warten lassen.' },
 ];
 
