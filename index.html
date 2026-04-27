@@ -570,7 +570,7 @@
     header h1 { font-size: 1.6rem; }
     nav button { padding: 0.75rem 0.9rem; font-size: 0.8rem; }
     .section-heading { font-size: 1.4rem; }
-    .abc-grid { grid-template-columns: repeat(2, 1fr); }
+    .abc-grid { grid-template-columns: repeat(3, 1fr); }
     .chain-node { min-width: 60px; }
   }
 </style>
@@ -795,6 +795,51 @@
       <div class="abc-cell cz">Geringer Wert / sporadisch → Konsignationslager, Local Buying</div>
     </div>
   </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon">📋</div>Folgerungen: Behandlung AX- vs. CZ-Teile (Folie 165)</div>
+    <p style="font-size:0.875rem;color:var(--text-muted);margin-bottom:0.75rem;">Quelle: Arnolds et al. (2010). Die Kombination aus Wert (A/C) und Vorhersagegenauigkeit (X/Z) bestimmt die Beschaffungsstrategie.</p>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr><th>Bereich</th><th style="background:#1D9E75;">AX-Teile</th><th style="background:#9B6D00;">CZ-Teile</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Lieferantenauswahl</strong></td>
+            <td>Zuverlässigkeit, Flexibilität, Integrationsfähigkeit; Jahresverhandlungen</td>
+            <td>Einstandspreis, Lieferservice; Umfang der Lagerhaltung des Lieferanten</td>
+          </tr>
+          <tr>
+            <td><strong>Vertragsgestaltung</strong></td>
+            <td>Langfristige Partnerschaftsverträge</td>
+            <td>Abrufverträge auf Jahresbasis</td>
+          </tr>
+          <tr>
+            <td><strong>Bestellabwicklung</strong></td>
+            <td>JIT-Belieferung; Einschaltung von ERP</td>
+            <td>Einfache Verfahren / Sammelbestellung; Einschaltung der Bedarfsträger</td>
+          </tr>
+          <tr>
+            <td><strong>Lieferantenpolitik</strong></td>
+            <td>Single Sourcing; Lieferantenmotivation; Partnerschaft</td>
+            <td>Local Buying; Übertragung von Aufgaben auf den Lieferanten; Konsignationslager</td>
+          </tr>
+          <tr>
+            <td><strong>Vorratspolitik</strong></td>
+            <td>Mengenbündelung; niedrige Sicherheitsbestände</td>
+            <td>Gewisse Bestände halten</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="memory-box">
+      <div class="memory-box-label">Merkhilfe</div>
+      <strong>AX</strong> = wertvoll &amp; planbar → Partnerschaft, JIT, Single Sourcing, ERP, niedrige Bestände<br>
+      <strong>CZ</strong> = günstig &amp; unvorhersehbar → Preis im Fokus, simpel bestellen, Konsignationslager, Bestände halten
+    </div>
+  </div>
 </div>
 
 <!-- ===================== CCC ===================== -->
@@ -867,23 +912,45 @@
   <p class="section-sub">Der Zielkonflikt zwischen Rüstkosten und Lagerkosten.</p>
 
   <div class="card">
-    <div class="card-title"><div class="icon">⚙️</div>Kernkonzept</div>
+    <div class="card-title"><div class="icon">📌</div>Aufgabe &amp; Ziel der Losgrößenplanung</div>
+    <div class="definition-box">
+      <strong>Aufgabe:</strong> Festlegung der Produktmengen, die ohne Umrüsten auf einer Maschine hergestellt werden können.<br>
+      → Anwendung bei Serien- und Sortenfertigung, Werkstatt- und Zentrenfertigung.
+    </div>
+    <div class="definition-box" style="margin-top:0.75rem;">
+      <strong>Ziel:</strong> Minimierung der Summe aus Rüstkosten und Lager- einschließlich Zinskosten durch Ermittlung der wirtschaftlichen Losgröße für alle Arbeitsgänge. (Grundmodell von Harris/Andler)
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon">⚙️</div>Zielkonflikt: Große vs. kleine Lose</div>
+    <p style="font-size:0.875rem;color:var(--text-muted);margin-bottom:0.75rem;">Bei der Losgrößenrechnung stehen zwei gegensätzliche Kostentreiber gegeneinander:</p>
     <div class="tbl-wrap">
       <table>
-        <thead><tr><th>Kostentyp</th><th>Abhängigkeit</th><th>Präferenz</th><th>Beispiel</th></tr></thead>
+        <thead><tr><th>Kostentyp</th><th>Abhängigkeit</th><th>Ziel</th><th>Beispiel</th></tr></thead>
         <tbody>
-          <tr><td><strong>Auflagefixe Kosten</strong></td><td>Unabhängig von Losgröße</td><td>Große Lose</td><td>Rüstkosten je Umrüstprozess</td></tr>
-          <tr><td><strong>Auflagevariable Kosten</strong></td><td>Abhängig von Losgröße</td><td>Kleine Lose</td><td>Lager- und Zinskosten</td></tr>
+          <tr><td><strong>Auflagefixe Kosten</strong></td><td>Unabhängig von Losgröße</td><td>→ Große Lose</td><td>Rüstkosten je Umrüstprozess</td></tr>
+          <tr><td><strong>Auflagevariable Kosten</strong></td><td>Abhängig von Losgröße</td><td>→ Kleine Lose</td><td>Lager- und Zinskosten</td></tr>
         </tbody>
       </table>
     </div>
     <div class="definition-box" style="margin-top:0.75rem;">
-      <strong>Optimale Losgröße:</strong> Dort, wo die Summe aus auflagefixen und auflagevariablen Kosten pro Stück am geringsten ist.
+      <strong>Lösung — Kompromiss:</strong> Die optimale Losgröße liegt dort, wo die <strong>Summe aus auflagefixen und auflagevariablen Kosten pro Stück minimal</strong> ist.
     </div>
     <div class="memory-box">
       <div class="memory-box-label">Merkhilfe</div>
-      "Groß produzieren = günstig rüsten, teuer lagern. Klein produzieren = günstig lagern, teuer rüsten." → Der Kompromiss ist die optimale Losgröße.
+      "Groß produzieren = günstig rüsten, teuer lagern. Klein produzieren = günstig lagern, teuer rüsten." → Der Kompromiss ist die optimale Losgröße.<br><br>
+      <strong>Praxis-Trend (laut Skript):</strong> Trend zu kleineren optimalen Losgrößen, ermöglicht durch den Einsatz neuer Technologien.
     </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon">📐</div>Ermittlung der optimalen Losgröße — Determinanten</div>
+    <ul class="sum-list">
+      <li><div class="dot"></div><div><strong>Auflagendegression:</strong> Je größer das Fertigungslos, desto mehr sinken die fixen Umrüstkosten je produzierter Einheit.</div></li>
+      <li><div class="dot"></div><div><strong>Auflagenproportionalität:</strong> Mit steigender Losgröße steigt die durchschnittliche Lagerungsdauer — Aufbewahrungskosten pro Stück steigen.</div></li>
+      <li><div class="dot"></div><div>Im Rahmen einer Losgrößenplanung müssen die optimalen Losgrößen der verschiedenen Varianten <strong>zeitlich aufeinander abgestimmt</strong> werden.</div></li>
+    </ul>
   </div>
 
   <div class="card">
